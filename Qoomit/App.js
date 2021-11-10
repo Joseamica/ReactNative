@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation';
 import Loading from "./src/components/Loading"
+import Portal from '@burstware/react-native-portal';
 
 
 
@@ -28,10 +29,16 @@ export default function App() {
 
   return (
     <>
-  {loading ? <Loading/> :     
+  {loading ? <Loading/> :   
+    <Portal.Host>
+  
   <NavigationContainer>
     <Navigation />
-  </NavigationContainer>}
+  </NavigationContainer>
+  </Portal.Host>
+
+  }
+
 
   </>
   );

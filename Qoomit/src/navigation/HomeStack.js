@@ -57,12 +57,12 @@ function HomeStack({navigation}) {
               <Ionicons name="arrow-back" size={25} />
             </TouchableOpacity>
           ),
-          headerRight: (props) => (
-            <FilterButton
-              {...props}
-              onPress={() => navigation.navigate('Filter')}
-            />
-          ),
+          // headerRight: (props) => (
+            // <FilterButton
+            //   {...props}
+            //   onPress={() => navigation.navigate('Filter')}
+            // />
+          // ),
         }}
       />
       <Stack.Screen

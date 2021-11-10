@@ -7,15 +7,15 @@ import {StyleSheet, View} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-//import {default as TabBarAdvancedButton} from '../components/TapBarAdvancedButton';
+import {default as TabBarAdvancedButton} from '../components/TapBarAdvancedButton';
 import Delete from '../screens/Delete';
 import {IS_IPHONE_X} from '../utils/index';
 import colors from './../utils/colors';
-// import CreateStack from './CreateStack';
-//import HomeStack from './HomeStack';
-// import MenuStack from './MenuStack';
+import CreateStack from './CreateStack';
+import HomeStack from './HomeStack';
+import MenuStack from './MenuStack';
 // import QoomitStack from './QoomitStack';
-// import ShopStack from './ShopStack';
+import ShopStack from './ShopStack';
 
 Ionicons.loadFont();
 Feather.loadFont();
@@ -78,13 +78,13 @@ const TabNavigator = ({barColor = /*'#F6F7EB'*/ 'white'}) => {
           backgroundColor: barColor,
         },
       }}>
-      <Tab.Screen name="Home" component={Delete} 
+      <Tab.Screen name="Home" component={HomeStack} 
           options={{
           headerShown: false,
           headerTitle: 'Workout Description',
         }}/>
       
-      {/* <Tab.Screen name="Qoomit" component={QoomitStack} />
+      {/* <Tab.Screen name="Qoomit" component={QoomitStack} />*/}
 
       <Tab.Screen
         name="Create"
@@ -95,8 +95,9 @@ const TabNavigator = ({barColor = /*'#F6F7EB'*/ 'white'}) => {
           ),
         }}
       />
+       
       <Tab.Screen name="Shop" component={ShopStack} />
-      <Tab.Screen name="Menu" component={MenuStack} /> */}
+      <Tab.Screen name="Menu" component={MenuStack} />
     </Tab.Navigator>
   );
 };
